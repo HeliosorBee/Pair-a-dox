@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #ffffff url(img/geometry2.png);
+  background: #ffffff;
   padding: 0px 10px;
 }
 
@@ -19,12 +19,20 @@ h1 {
   margin: 15px;
 }
 
-h1 span {
-  color: #006c5d;
+h1 #pair{
+  color: #de2784;
+}
+
+h1 #a {
+  color: #029baf;
+}
+
+h1 #dox {
+  color: #ffb200;
 }
 
 .main-container {
-  background: #0f3c5e36;
+  background: #7e838636;
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
@@ -52,15 +60,22 @@ h1 span {
           align-items: center;
   padding: 40px 0;
   margin: 10px auto;
-  max-width: 980px;
+  max-width: 1500px;
 }
 
 main {
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 5fr;
   grid-template-columns: 2fr 5fr;
   padding: 20px;
+  justify-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .scoreboard {
@@ -86,27 +101,31 @@ main {
           align-items: center;
   text-align: center;
   font-size: 2rem;
+  height: 50%;
 }
 
-.restart {
-  cursor: pointer;
-}
-
-#score {
+.score {
   margin-left: 10px;
 }
 
-.restart {
-  margin-top: 30px;
-  font-size: 0.8rem;
+.add-cards {
+  font-weight: bold;
+  padding: 1rem 0.5rem;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+  font-size: 1.5rem;
 }
 
-img {
-  width: 75%;
-  height: auto;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
+#inactive {
+  background-color:lightgray;
+  color: white;
+}
+
+#active {
+  cursor: pointer;
+  background-color: #de2784;
+  color: white;
 }
 
 #cards {
@@ -115,7 +134,7 @@ img {
   -ms-grid-columns: minmax(100px, 150px) 5px minmax(100px, 150px) 5px minmax(100px, 150px) 5px minmax(100px, 150px);
   grid-template-columns: repeat(4, minmax(100px, 150px));
   grid-auto-rows: 1fr;
-  grid-gap: 5px 5px;
+  grid-gap: 25px 40px;
 }
 
 .card {
@@ -138,6 +157,9 @@ img {
      -moz-border-radius: 5px;
           border-radius: 5px;
   cursor: pointer;
+  list-style-type: none;
+  width: 90%;
+  background-color: white;
 }
 
 #cards::before {
@@ -155,6 +177,19 @@ img {
   grid-row: 1 / 1;
   -ms-grid-column: 1;
   grid-column: 1 / 1;
+}
+
+.selected {
+  outline: 0.3rem solid lightgray;
+  outline-offset: 5px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
 }
 
 
