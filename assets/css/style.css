@@ -61,7 +61,9 @@ h1 #dox {
   padding: 40px 0;
   margin: 10px auto;
   max-width: 1500px;
-}
+  -webkit-box-shadow: 0px 0px 10px 1px lightgray inset;
+      -moz-box-shadow: 0px 0px 10px 1px lightgray inset;
+          box-shadow: 0px 0px 10px 1px lightgray inset;
 
 main {
   width: 100%;
@@ -101,7 +103,7 @@ main {
           align-items: center;
   text-align: center;
   font-size: 2rem;
-  height: 50%;
+  height: 60%;
 }
 
 .score {
@@ -160,6 +162,9 @@ main {
   list-style-type: none;
   width: 90%;
   background-color: white;
+  -webkit-box-shadow: 0px 0px 10px 1px lightgray;
+     -moz-box-shadow: 0px 0px 10px 1px lightgray;
+          box-shadow: 0px 0px 10px 1px lightgray;
 }
 
 #cards::before {
@@ -193,3 +198,4 @@ img {
 }
 
 
+}
